@@ -14,7 +14,6 @@ using static PachinkoBall;
 namespace Superball
 {
     [BepInPlugin(GUID, Name, Version)]
-
     [BepInDependency("com.ruiner.prolib", BepInDependency.DependencyFlags.HardDependency)]
     public class Plugin : BaseUnityPlugin
     {
@@ -42,14 +41,13 @@ namespace Superball
         public static ConfigEntry<float> LevelThreeHitMultiplier;
         public static ConfigEntry<int> LevelThreeHitAmount;
 
-        private Harmony _harmony;
         public static ManualLogSource Log;
         public static ConfigFile ConfigFile;
 
-        // Sprites
         public static Sprite Superball;
         public static Sprite SuperballAttack;
 
+        private Harmony _harmony;
 
         private void Awake()
         {
